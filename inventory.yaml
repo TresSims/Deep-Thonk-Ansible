@@ -1,0 +1,38 @@
+arch:
+  hosts:
+    desktop-01.tres.sims.family:
+    laptop-01.tres.sims.family:
+
+ubuntu:
+  hosts:
+    desktop-01.nicole.sims.family:
+    laptop-01.nicole.sims.family:
+
+endpoints:
+  children:
+    arch:
+    ubuntu:
+
+lab:
+  hosts:
+    pihole-01.deep-thonk.com:
+      ansible_user: pi
+    san-01.deep-thonk.com:
+    kube-01.deep-thonk.com:
+    kube-02.deep-thonk.com:
+
+dmz:
+  hosts:
+    tres-sims.com:
+      ansible_host: tres-sims.taile812.ts.net
+
+all:
+  children:
+    endpoints:
+    lab:
+    dmz:
+
+servers:
+  children:
+    dmz:
+    lab:
