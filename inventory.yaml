@@ -6,12 +6,17 @@ arch:
 ubuntu:
   hosts:
     desktop-01.nicole.sims.family:
+
+windows:
+  hosts:
     laptop-01.nicole.sims.family:
+    
 
 endpoints:
   children:
     arch:
     ubuntu:
+    windows:
 
 lab:
   hosts:

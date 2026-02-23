@@ -1,0 +1,7 @@
+- name: arch-alloy-install
+  hosts: arch
+  tasks:
+    - name: Install alloy agent
+      community.general.pacman:
+        name: grafana-alloy
+        state: present

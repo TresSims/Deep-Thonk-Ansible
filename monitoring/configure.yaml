@@ -1,0 +1,9 @@
+- name: configure-alloy
+  hosts: all
+  tasks:
+    - name: Configure alloy agent
+      ansible.builtin.template:
+        src: monitoring/config.alloy.j2
+        dest: /etc/grafana-alloy/config.alloy
+      
+    
